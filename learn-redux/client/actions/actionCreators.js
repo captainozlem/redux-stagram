@@ -18,10 +18,19 @@ export function addComment(postId, author, comment) {
 }
 
 // remove comment
-export function removeComment(postId, index) {
+//somehow commented action Creator writes everything twice! either I need to use 'index' in comments.js instead of 'i' or i should correct index as i down there..
+// export function removeComment(postId, index) {
+//   return {
+//     type: 'REMOVE_COMMENT',
+//     postId,
+//     index
+//   };
+// }
+
+export function removeComment(postId, i) {
   return {
     type: 'REMOVE_COMMENT',
-    postId,
-    index
+    i,
+    postId
   };
 }
